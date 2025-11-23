@@ -1,0 +1,33 @@
+{
+  "name": "@pidanmoe/mcp-scan-qr",
+  "version": "1.0.0",
+  "module": "dist/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "@pidanmoe/mcp-scan-qr": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "fastmcp dev src/index.ts",
+    "inspect": "fastmcp inspect src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "bun run build"
+  },
+  "keywords": [
+    "mcp",
+    "fastmcp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastmcp": "^3.8.2",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
