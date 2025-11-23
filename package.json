@@ -6,6 +6,9 @@
   "bin": {
     "@pidanmoe/mcp-scan-qr": "./dist/index.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "fastmcp dev src/index.ts",
     "inspect": "fastmcp inspect src/index.ts",
