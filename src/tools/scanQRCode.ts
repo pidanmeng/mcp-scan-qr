@@ -6,12 +6,9 @@ import sharp from 'sharp';
 import jsQR from 'jsqr';
 
 const name = 'scanQRCode';
-const description = 'Scan QR code from an image URL (HTTPS only)';
+const description = 'Scan QR code from an image URL';
 const parameters = z.object({
-  imageUrl: z
-    .string()
-    .url()
-    .startsWith('https://', { message: 'Only HTTPS URLs are allowed' }),
+  imageUrl: z.string().url(),
 });
 
 // 定义返回结果的类型
@@ -36,11 +33,6 @@ const scanQRCode: Tool<any, z.ZodType<typeof parameters._type>> = {
     logger.info(`Scanning QR code from URL: ${imageUrl}`);
 
     try {
-      // 验证是否为HTTPS URL
-      if (!imageUrl.startsWith('https://')) {
-        throw new Error('Only HTTPS URLs are allowed for security reasons');
-      }
-
       // 下载图片数据
       const response = await axios.get(imageUrl, {
         responseType: 'arraybuffer',

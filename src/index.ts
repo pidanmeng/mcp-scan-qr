@@ -5,7 +5,7 @@ import { scanQRCodeBatch } from './tools/scanQRCodeBatch';
 
 const server = new FastMCP({
   name: 'MCP Scan QR',
-  version: '1.0.1',
+  version: '1.0.3',
 });
 
 server.addTool(scanQRCode);

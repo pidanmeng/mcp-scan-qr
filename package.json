@@ -1,6 +1,6 @@
 {
   "name": "@pidanmoe/mcp-scan-qr",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "module": "dist/index.js",
   "preferGlobal": true,
   "bin": {

@@ -6,7 +6,7 @@ import sharp from 'sharp';
 import jsQR from 'jsqr';
 
 const name = 'scanQRCodeBatch';
-const description = 'Scan QR codes from a batch of image URLs (HTTPS only)';
+const description = 'Scan QR codes from a batch of image URLs';
 const parameters = z.object({
   imageUrls: z
     .array(z.string().url())
