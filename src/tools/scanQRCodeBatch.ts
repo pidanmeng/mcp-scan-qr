@@ -46,6 +46,7 @@ const scanQRCodeBatch: Tool<any, z.ZodType<typeof parameters._type>> = {
         // 下载图片数据
         const response = await axios.get(imageUrl, {
           responseType: 'arraybuffer',
+          timeout: 5000,
         });
 
         // 获取内容类型
