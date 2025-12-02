@@ -2,6 +2,7 @@
 import { FastMCP } from 'fastmcp';
 import { scanQRCode } from './tools/scanQRCode';
 import { scanQRCodeBatch } from './tools/scanQRCodeBatch';
+import { generateQRCode } from './tools/generateQRCode';
 
 const server = new FastMCP({
   name: 'MCP Scan QR',
@@ -10,6 +11,7 @@ const server = new FastMCP({
 
 server.addTool(scanQRCode);
 server.addTool(scanQRCodeBatch);
+server.addTool(generateQRCode);
 
 server.start({
   transportType: 'stdio',

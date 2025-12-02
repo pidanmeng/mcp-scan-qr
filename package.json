@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "fastmcp dev src/index.ts",
     "inspect": "fastmcp inspect src/index.ts",
-    "build": "tsc",
+    "build": "tsc && cp -R src/fonts dist",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "bun run build"
@@ -24,9 +24,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@types/qrcode": "^1.5.6",
     "axios": "^1.13.2",
     "fastmcp": "3.23.1",
     "jsqr": "^1.4.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "satori": "^0.18.3",
     "sharp": "^0.34.5",
     "zod": "^3.25.67"
   },

@@ -5,8 +5,8 @@ import axios from 'axios';
 import sharp from 'sharp';
 import jsQR from 'jsqr';
 
-const name = 'scanQRCodeBatch';
-const description = 'Scan QR codes from a batch of image URLs';
+const name = '批量扫描二维码';
+const description = '通过多个图片URL批量扫描二维码';
 const parameters = z.object({
   imageUrls: z
     .array(z.string().url())

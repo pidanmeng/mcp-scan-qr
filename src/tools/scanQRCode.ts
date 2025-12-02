@@ -5,8 +5,8 @@ import axios from 'axios';
 import sharp from 'sharp';
 import jsQR from 'jsqr';
 
-const name = 'scanQRCode';
-const description = 'Scan QR code from an image URL';
+const name = '扫描单张二维码';
+const description = '通过图片URL扫描二维码';
 const parameters = z.object({
   imageUrl: z.string().url(),
 });
